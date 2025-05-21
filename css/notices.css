@@ -1,0 +1,105 @@
+/* Add animation for the notices popup */
+.notices-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a0a8a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade and upward movement */
+}
+
+.notices-popup.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to its original position */
+}
+
+.notices-popup.hidden {
+    opacity: 0; /* Fade out */
+    transform: translateY(20px); /* Move slightly downward */
+    pointer-events: none; /* Prevent interaction during fade-out */
+}
+
+.notices-popup-content {
+    background-color: #f5f5f5;
+    width: 500px; /* Keep the form width consistent */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #0a0a0a;
+    text-align: center;
+    position: relative;
+    font-family: Arial, sans-serif; /* Set font to Arial */
+    font-size: 16px;
+    color: #0a0a0a;
+}
+
+.notices-popup-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px; /* Larger heading */
+}
+
+.notices-popup-content label {
+    display: block;
+    margin: 15px 0 5px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.notices-popup-content input,
+.notices-popup-content textarea {
+    width: 95%; /* Adjust the width to align with the text */
+    padding: 15px; /* Keep the height consistent */
+    margin-bottom: 20px; /* Add spacing below each field */
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    font-size: 16px; /* Keep the font size consistent */
+    display: block; /* Ensure the fields are block-level elements */
+    text-align: left; /* Keep text left-aligned */
+    margin-left: auto; /* Center the fields horizontally */
+    margin-right: auto; /* Center the fields horizontally */
+}
+
+.notices-popup-content textarea {
+    resize: none; /* Allow resizing only vertically */
+    overflow: auto; /* Ensure scrollbars appear if needed */
+}
+
+.notices-popup-content button {
+    background-color: #007BFF;
+    color: #f5f5f5;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Larger button text */
+}
+
+.notices-popup-content button:hover {
+    background-color: #0056b3;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a0a0a;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+
+#form-message {
+    font-size: 14px;
+    font-weight: bold;
+}

@@ -1,0 +1,79 @@
+<!-- Version 01 // Still -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Lexeme</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/mainbody.css">
+    <script src="js/mainbody.js" defer></script>
+
+    <canvas id="particle-canvas"></canvas>
+    <script src="js/particles.js"></script>
+
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/contact.js" defer></script>
+
+    <link rel="stylesheet" href="css/notices.css">
+    <script src="js/notices.js" defer></script>    
+</head>
+
+<body>
+    <div class="corner topleft" onclick="reloadPage()">LEXEME</div>
+    <div class="corner topright" onclick="openContactForm()">CONTACT</div>
+    <div class="corner bottomleft" onclick="openNotices()">Notices & Disclosures</div>
+    <div class="corner bottomright">Copyright © 2025 Lexeme. All rights reserved.</div>
+
+    <div class="corner mainbody">
+        <p>Founded in 2025, Lexeme is a team of <span class="typewriter"></span>
+            <br>who all have a relentless drive to develop cutting edge 
+            <br>algorithms and innovate in quantitative finance.</p>
+        <p>"Lexeme started in my parent's apartment in Brooklyn.
+            <br> &nbsp;Soon it will be a renowned name in quantitative investing."
+            <br>- Founder</p>
+    </div>
+
+    <!-- Contact Form Pop-up -->
+    <div id="contact-popup" class="contact-popup hidden">
+        <div class="contact-popup-content">
+            <span class="close-btn" onclick="closeContactForm()">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="6ea9de31-e420-48e9-b409-697b24acdc19">
+
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                
+                <button type="submit">Send</button>
+                <p id="form-message" style="margin-top: 10px;"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notices & Disclosures Pop-up -->
+    <div id="notices-popup" class="notices-popup hidden">
+        <div class="notices-popup-content">
+            <span class="close-btn" onclick="closeNotices()">&times;</span>
+            <h2>Notices & Disclosures</h2>
+            <p>
+                This website is for informational purposes only.
+                <br>The information provided is not intended as investment advice.
+                <br>Investing in financial markets involves risk, and past performance is not indicative of future results.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
