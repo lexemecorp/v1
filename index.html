@@ -28,7 +28,7 @@
 
 <body>
     <div class="corner topleft" onclick="reloadPage()">LEXEME</div>
-    <div class="corner topright" onclick="openContactForm()">CONTACT</div>
+    <div class="corner topright" onclick="openContactForm()"></div>
     <div class="corner bottomleft" onclick="openNotices()">Notices & Disclosures</div>
     <div class="corner bottomright">Copyright © 2025 Lexeme. All rights reserved.</div>
 
@@ -39,27 +39,6 @@
         <!-- <p>"Lexeme started in my parent's apartment in Brooklyn.
             <br> &nbsp;Soon it will be a renowned name in quantitative investing."
             <br>- Founder</p> -->
-    </div>
-
-    <!-- Contact Form Pop-up -->
-    <div id="contact-popup" class="contact-popup hidden">
-        <div class="contact-popup-content">
-            <span class="close-btn" onclick="closeContactForm()">&times;</span>
-            <h2>Contact Us</h2>
-            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                <!-- Web3Forms Access Key -->
-                <input type="hidden" name="access_key" value="6ea9de31-e420-48e9-b409-697b24acdc19">
-
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                
-                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                
-                <button type="submit">Send</button>
-                <p id="form-message" style="margin-top: 10px;"></p>
-            </form>
-        </div>
     </div>
 
     <!-- Notices & Disclosures Pop-up -->
